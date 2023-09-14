@@ -3,7 +3,10 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     user: false,
-    contentDelta: ''
+    contentDelta: '',
+    quest:'',
+    answer:'',
+    quests: [],
   },
 
   getters: {

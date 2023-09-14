@@ -1,15 +1,10 @@
 <template>
   <div id="app" class="justify-center d-flex">
     <v-card style="width: 60vw" class="mt-10">
-    <quill-editor v-model:content="$store.state.contentDelta" theme="snow"></quill-editor>
+    <quill-editor v-model:content="$store.state.question" theme="snow"></quill-editor>
     </v-card>
   </div>
 
-  <div class="justify-center d-flex">
-    <v-card style="width: 60vw; background-color: deepskyblue" class="mt-10">
-      <div class="text-center mx-10" v-html="convertDeltaToHtml($store.state.contentDelta)"></div>
-    </v-card>
-  </div>
 </template>
 
 <script>

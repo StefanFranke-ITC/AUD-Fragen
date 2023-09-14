@@ -88,7 +88,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .card {
   background-color: rgba(255, 255, 255, 0.10);
   border-top: 1px solid rgba(255, 255, 255, 0.75);

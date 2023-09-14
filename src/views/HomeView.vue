@@ -1,35 +1,27 @@
 <template>
-  test
   <div class="background">
-    <TextEditorComponent/>
-    <div class="d-flex justify-center">
+    <div class="align-center d-flex justify-center " style="height: 100vh">
       <LoginComponent/>
-      test
-    </div>
-    <div class="d-flex justify-center">
-      <RegistrierenComponent/>
     </div>
   </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
-import TextEditorComponent from "@/components/TextEditorComponent";
 import LoginComponent from "@/components/LoginComponent";
-import RegistrierenComponent from "@/components/RegistrierenComponent";
 
 export default defineComponent({
   name: 'HomeView',
 
   components: {
-    LoginComponent, TextEditorComponent, RegistrierenComponent
+    LoginComponent,
   },
 });
 </script>
-<style>
+<style scoped>
 .background {
   background-image: url("../assets/backgroundLogin.jpg");
-  height: 100%;
+  height: 100vh;
   position: fixed;
   width: 100%;
 }

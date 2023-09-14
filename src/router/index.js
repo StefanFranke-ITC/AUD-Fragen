@@ -2,12 +2,18 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ImpressumView from "@/views/ImpressumView";
 import DatenschutzView from "@/views/DatenschutzView";
+import CreateQuestionView from "@/views/CreateQuestionView";
 
 const routes = [
   {
-    path: '/',
+    path: '/login',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/',
+    name: 'CreateQuestion',
+    component: CreateQuestionView
   },
   {
     path: '/impressum',

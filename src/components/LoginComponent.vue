@@ -28,24 +28,15 @@
                   </v-col>
                 </v-row>
               </v-container>
-              <v-alert v-if="error === 'AxiosError: Request failed with status code 401'"
-                       class="text-center text-black" type="error">
-                Benutzername oder Passwort ist falsch.
-              </v-alert>
-
-              <v-alert v-if="error !== 'AxiosError: Request failed with status code 401' && error != null"
-                       class="text-center text-black" type="error">
-                Einloggen ist momentan nicht möglich. Bitte wenden Sie sich an den Administrator.
-              </v-alert>
             </v-card-text>
             <v-card-actions class="d-flex justify-center">
               <v-btn
-                  
+
                   variant="text">
                 Abbrechen
               </v-btn>
               <v-btn
-                  
+
                   type="submit">
                 Einloggen
               </v-btn>
@@ -61,7 +52,7 @@ import axios from "axios";
 export default {
   name: "LoginComponent",
   data: () => ({
-    email: null,
+    email: '',
     password: '',
 }),
 
@@ -73,6 +64,7 @@ export default {
   },
   methods: {
     async login() {
+      console.log('test')
       try {
         const response = await axios.post('/login',
             {
@@ -80,6 +72,7 @@ export default {
               password: this.password
               // Eventuell weitere Attribute
             });
+        console.log(response)
         await localStorage.setItem('token', response.data)
         // Was soll danach passieren? Wohin weiterleiten?
       } catch (error) {
@@ -112,7 +105,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .card {
   background-color: rgba(255, 255, 255, 0.10);
   border-top: 1px solid rgba(255, 255, 255, 0.75);
