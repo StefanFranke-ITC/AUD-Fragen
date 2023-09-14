@@ -379,6 +379,15 @@ export default {
   right: 70px;
   top: 50px;
   box-shadow: 0px 0px 30px 10px red inset, 0px 0px 30px 5px orange inset, 0px 0px 10px 5px red , 0px 0px 50px 15px red,0px 0px 200px 30px white;
+  animation: moveUpDown 2s infinite alternate; /* Hier wird die Animation angewendet */
+}
+@keyframes moveUpDown {
+  0% {
+    top: 10%; /* Startposition */
+  }
+  100% {
+    top: 80%; /* Endposition */
+  }
 }
 .nutzerSelected{
   background-color: purple;
