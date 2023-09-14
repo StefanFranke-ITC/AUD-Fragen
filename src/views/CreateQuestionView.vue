@@ -1,19 +1,36 @@
 <template>
+  <div class="sonne">
+
+  </div>
   <v-tabs
       class="mt-5 mb-n16"
       v-model="tab"
       align-tabs="center"
       style="color: #e3dede">
-    <v-tab :value="0" color="black">Frage erstellen</v-tab>
-    <v-tab :value="1" color="black">Frage löschen -></v-tab>
-    <v-tab :value="2" color="black">Frage bearbeiten </v-tab>
+    <v-tab :value="0" color="white">Frage erstellen</v-tab>
+    <v-tab :value="1" color="white">Frage löschen </v-tab>
+    <v-tab :value="2" color="white">Frage bearbeiten </v-tab>
   </v-tabs>
 <div class="d-flex justify-center align-center" style="height: 100vh">
+  <v-card class="card1">
+    <v-row justify="center">
+      <v-col cols="11" class="d-flex justify-center">
+        <div style="border-radius: 4px; padding: 8px; border: #e3dede solid 2px; width: 100% ">
+          <h3 class="text-white text-center">Fragen</h3>
+        </div>
+      </v-col>
+      <v-col cols="11" class="d-flex justify-center">
+        <div style="border-radius: 4px; padding: 8px; border: #e3dede solid 2px; width: 100% ">
+          <h3 class="text-white text-center">Nutzer</h3>
+        </div>
+      </v-col>
+    </v-row>
+  </v-card>
   <v-card class="card">
   <v-window v-model="tab">
     <v-window-item  class="text-white " value="0">
       <v-card-title class="text-center mb-5">
-        Frage Erstellen
+        Frage erstellen
       </v-card-title>
       <div style="overflow-y: scroll; padding-bottom: 200px; height: 100%">
         <v-row class="d-flex justify-center">
@@ -200,5 +217,22 @@ export default {
   width: 730px;
   background-color: #282727;
 }
+.card1{
+  margin-right: 30px;
+  padding: 20px;
+  height: 700px;
+  width: 400px;
+  background-color: #282727;
+}
+.sonne{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background-color: white;
+  right: 50px;
+  top: 20px;
+  box-shadow: 0px 0px 30px 10px red inset, 0px 0px 30px 5px orange inset, 0px 0px 10px 5px red , 0px 0px 50px 15px red,0px 0px 200px 30px white;
 
+}
 </style>

@@ -17,6 +17,9 @@ export default {
 }
 </script>
 <style>
+#home{
+  background-color: #000000;
+}
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;
